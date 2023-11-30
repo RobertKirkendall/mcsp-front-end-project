@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootsrap link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!--jQuery link-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--bootsrap link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Fortune Teller</title>
+    <!--favicon declaration-->
+    <link rel="icon" type="image/x-icon" href="crystalBallFavicon.png">
+</head>
+<body>
+    <!--curtain wizard background-->
+    <div id="curtainCover">
+        <img id="wizardGuy" src="Wizard Dude.png">
+        <span id="wizardTalk" class="container" > Hello, Traveler <br> You wish to see the Fortune Teller? </span>
+        <!--accordian starts here-->
+        <div id="curtainCoverAccordian" class="container">
+        <div class="accordion accordion-flush" id="accordianCurtain">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 Welcome To Fortune Teller!
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Welcome to Fortune Teller, here a cool old dude will tell you one thing you destined for!</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Beware of the Wizard!
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">The wizard below is grumpy, and annoying, click on him to see the Fortune Teller!</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Disclaimer
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Fortune Teller is NOT RESPONSIBLE for any fortunes given that may or may not come true. <br> <br> Also this accordian is made entirely in HTML using Bootstrap! </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--accordian ends here-->
+    </div>
+        
+        <!--the code below is for the button above the Fortune Tellers head-->
+    <div id='centerContainer' class="container d-flex justify-content-center align-items-center" >
+        <button id="boredButton" type="button" class="btn btn-secondary">GLIMPSE into your FUTURE!</button>
+        <div id="childContainer" class="container justify-content-center align-items-center">
+        </div>
+    </div>
+</body>
+</html>

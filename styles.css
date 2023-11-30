@@ -1,0 +1,127 @@
+body {
+    background-image: url('clouds.jpg');
+    background-size: cover;
+}
+/*this is the container for accordian*/
+#curtainCoverAccordian{
+    position: absolute;
+    right: 150px;
+    top: 250px;
+    width: 450px;
+}
+/*this container is the image of the fortune teller*/
+#childContainer{
+    background-image: url('crystalBallDude.webp');
+    background-color: rgb(219, 4, 4);
+    background-size: cover;
+    border-radius: 35cap;
+    position: absolute;
+    margin-top: 1500px;
+    height: 800px;
+    width: 1000px;
+    
+}
+/*the clickable wizard area*/
+#wizardGuy{
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+
+}
+/*the wizards text*/
+#wizardTalk{
+    position: absolute;
+    bottom: 830px;
+    left: 170px;
+}
+/*this is the container for the red curtain, the wizard, and the accordian container*/
+#curtainCover{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('redCurtains.jpg'); 
+    background-size: cover;
+    opacity: 1; 
+    transition: opacity 1s ease-in-out;
+    z-index: 50;
+}
+
+/*the container for the button above the wizards head*/
+#boredButton {
+    padding: 30px;
+    background-color: #3a3a3900; /* background of button color, its invisible */
+    font-size: 45px;
+    font-display: bold;
+    color: #800080; /* text color */
+    border: none;
+    border-radius: 50px;
+    width: 900px;
+    height: 120px;
+    position: fixed;
+    top: 150px;
+    cursor: pointer;
+    -webkit-text-stroke: 2px #000000;
+    z-index: 10;
+}
+
+#fortune {
+    font-family:Arial, sans-serif; 
+    font-size: 20px;;
+}
+
+/*animation for the text above the fortune tellers head*/
+@keyframes sparkle {
+    0% {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+}
+/*animation for the big red curtain*/
+@keyframes sparkleAndHinge {
+    0% {
+        transform-origin: top left;
+        transform: rotate(0);
+        opacity: 1;
+    }
+    20% {
+        transform-origin: top left;
+        transform: rotate(10deg);
+        opacity: 0.8;
+    }
+    40% {
+        transform-origin: top left;
+        transform: rotate(-5deg);
+        opacity: 0.6;
+    }
+    60% {
+        transform-origin: top left;
+        transform: rotate(3deg);
+        opacity: 0.4;
+    }
+    80% {
+        transform-origin: top left;
+        transform: rotate(-2deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform-origin: top left;
+        transform: rotate(0);
+        opacity: 0;
+        z-index: -10;
+    }
+    
+}
+
+#curtainCover.sparkleAndHinge {
+    animation: sparkleAndHinge 2.5s ease-in-out forwards;
+}
